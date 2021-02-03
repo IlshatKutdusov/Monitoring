@@ -60,7 +60,7 @@
     <Compile Include="Common\Presener.cs" />
     <Compile Include="Presenters\SecondaryFormPresenter.cs" />
     <Compile Include="Views\IMainFormView.cs" />
-    <Compile Include="Views\IPresenter.cs" />
+    <Compile Include="Common\IPresenter.cs" />
     <Compile Include="Views\ISecondaryFormView.cs" />
     <Compile Include="Views\IView.cs" />
     <Compile Include="Models\WebSite.cs" />

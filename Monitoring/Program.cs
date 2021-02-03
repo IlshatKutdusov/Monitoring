@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using LightInject;
+
 using Monitoring.Common;
 using Monitoring.Presenters;
 using Monitoring.Views;
@@ -23,15 +20,6 @@ namespace Monitoring
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            //ServiceContainer container = new ServiceContainer();
-
-            //container.RegisterInstance<ApplicationContext>(Context);
-            //container.Register<IMainFormView, MainForm>();
-            //container.Register<MainFormPresenter>();
-
-            //ApplicationController controller = new ApplicationController(container);
-            //controller.Run<MainFormPresenter>();
 
             var controller = new ApplicationController(new InjectAdapter())
                 .RegisterView<IMainFormView, MainForm>()

@@ -1,4 +1,4 @@
-﻿namespace Monitoring.Views
+﻿namespace Monitoring.Common
 {
     public interface IPresenter
     {

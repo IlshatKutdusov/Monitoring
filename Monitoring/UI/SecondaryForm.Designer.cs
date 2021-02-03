@@ -40,7 +40,7 @@
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(128, 13);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(443, 23);
             this.textBoxName.TabIndex = 0;
@@ -82,7 +82,7 @@
             // 
             this.buttonAccept.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAccept.Location = new System.Drawing.Point(19, 111);
-            this.buttonAccept.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAccept.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAccept.Name = "buttonAccept";
             this.buttonAccept.Size = new System.Drawing.Size(552, 28);
             this.buttonAccept.TabIndex = 6;
@@ -118,9 +118,11 @@
             this.Controls.Add(this.textBoxURL);
             this.Controls.Add(this.textBoxName);
             this.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(600, 191);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(600, 191);
             this.Name = "SecondaryForm";
             this.Text = "SecondaryForm";
             this.ResumeLayout(false);
