@@ -17,7 +17,8 @@ namespace Monitoring.Presenters
         private WebSite _webSite = new WebSite();
         private readonly string _dataFileName = ConfigurationSettings.AppSettings["dataFileName"];
 
-        public SecondaryFormPresenter(IApplicationController applicationController ,ISecondaryFormView secondaryFormView) : base (applicationController, secondaryFormView)
+        public SecondaryFormPresenter(IApplicationController applicationController ,ISecondaryFormView secondaryFormView) 
+            : base (applicationController, secondaryFormView)
         {
             _secondaryFormView = secondaryFormView;
             _secondaryFormView.WebSiteUpload += () => WebSiteUpload();
@@ -40,6 +41,11 @@ namespace Monitoring.Presenters
             _secondaryFormView.Show();
         }
 
+        private void ShowErrorMessage(string errorMessage)
+        {
+            MessageBox.Show(errorMessage);
+        }
+
         private void WebSiteUpload()
         {
             try
@@ -57,11 +63,6 @@ namespace Monitoring.Presenters
                 ShowErrorMessage("" + ex);
             }
 
-        }
-
-        private void ShowErrorMessage(string errorMessage)
-        {
-            MessageBox.Show(errorMessage);
         }
     }
 }
