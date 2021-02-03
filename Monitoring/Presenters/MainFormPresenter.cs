@@ -36,7 +36,8 @@ namespace Monitoring.Presenters
         };
         #endregion
 
-        public MainFormPresenter(IApplicationController applicationController, IMainFormView mainFormView) : base(applicationController, mainFormView)
+        public MainFormPresenter(IApplicationController applicationController, IMainFormView mainFormView)
+            : base(applicationController, mainFormView)
         {
             _mainFormView = mainFormView;
             _applicationController = applicationController;
@@ -108,12 +109,12 @@ namespace Monitoring.Presenters
             }
         }
 
-        private async void WebSiteChange()
+        private void WebSiteChange()
         {
             try
             {
                 WebSite _webSite = _webSiteList[_selectedDataGridViewRow];
-                await Task.Run(() => Controller.Run<SecondaryFormPresenter, WebSite>(_webSite));
+                Controller.Run<SecondaryFormPresenter, WebSite>(_webSite);
             }
             catch(Exception ex)
             {
