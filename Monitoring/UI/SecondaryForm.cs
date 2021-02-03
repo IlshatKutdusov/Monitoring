@@ -13,7 +13,7 @@ namespace Monitoring.UI
         {
             _context = context;
             InitializeComponent();
-            buttonAccept.Click += (sender, args) => WebSiteUpload();
+            buttonAccept.Click += (sender, args) => Invoke(WebSiteUpload);
         }
 
         private void Invoke(Action action)
