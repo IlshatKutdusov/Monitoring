@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Threading;
 
 using Monitoring.Views;
-using Monitoring.Presenters;
-using System.Threading.Tasks;
 
 namespace Monitoring.UI
 {
